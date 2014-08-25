@@ -32,6 +32,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :public_network, ip: IP_ADDR, bridge: ADAPTER
 
   # Set up a shared folder.
-  config.vm.synced_folder "shared/", "/home/vagrant/shared", owner: "vagrant", group: "www-data", mount_options: ["dmode=755,fmode=755"]
+  config.vm.synced_folder "shared/", "/home/vagrant/shared", owner: "vagrant", group: "www-data", mount_options: ["dmode=777,fmode=777"]
 
 end
