@@ -24,9 +24,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
   end
 
-  # The url from where the 'config.vm.box' box will be fetched if it
+  # The url where the 'config.vm.box' box will be fetched from if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = IP_ADDR
+  config.vm.box_url = BOX_LOCATION
 
   # Configure the network
   config.vm.network :public_network, ip: IP_ADDR, bridge: ADAPTER
